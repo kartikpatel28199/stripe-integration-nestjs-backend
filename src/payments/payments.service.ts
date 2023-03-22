@@ -20,6 +20,7 @@ export class PaymentsService {
     return this.stripe.paymentIntents.create({
       amount: sumAmount * 100,
       currency: paymentRequestBody.currency,
+      description: 'Product',
     });
   }
 }
